@@ -5,7 +5,7 @@
 
 > Como Instalar
 ```
-$ git clone https://github.com/paulopanissa/qs-test qualitysistemas
+$ git clone https://github.com/paulopanissa/qualitysistemas qualitysistemas
 $ cd qualitysistemas
 $ sudo chown -R :www-data ./path/qualitysistemas
 $ sudo chmod -R 775 ./path/qualitysistemas/storage
@@ -36,6 +36,9 @@ $ vim ./frontend/src/main.js:8
 > edite a linha 'http://qs.localhost:8000' -> coloque a URL que irá utilizar
 $ npm run build
 ```
+
+Abra no Navagador;
+Qualquer coisa entre em contato.
 
 
 - Pacotes Utilizados: Imagem Faker - https://github.com/bluemmb/Faker-PicsumPhotos
