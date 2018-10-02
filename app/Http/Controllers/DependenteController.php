@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rules\AgeRule;
 use App\Http\Resources\DependenteResource;
 use App\Http\Resources\DependentesResource;
 use App\Models\CadastroDependente;
@@ -18,6 +19,10 @@ class DependenteController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nome' => ['required', 'max:255', 'min:3'],
+            'data_nascimento' => ['required', new AgeRule]
+        ]);
         $dependente = new CadastroDependente([
             'nome' => $request->nome,
             'data_nascimento' => dateToUS($request->data_nascimento)
