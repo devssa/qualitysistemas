@@ -27,7 +27,7 @@ class NovoRequest extends FormRequest
         return [
             'email' => ['required', 'email', 'unique:cadastro_pessoas'],
             'nome' => ['required', 'max:255', 'min:3'],
-            'data_nascimento' => [new AgeRule]
+            'data_nascimento' => ['required', new AgeRule]
         ];
     }
 }
